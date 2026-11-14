@@ -1,0 +1,217 @@
+/* Layout ứng dụng + module Nhà trọ (UC2.x) */
+.main{flex:1;padding:16px 32px;min-width:0}
+.page-head{margin-bottom:0}
+.empty{margin-top:40px}
+.flash{display:flex;align-items:center;gap:12px;height:44px;margin:16px 0 0;padding:0 16px;border-radius:12px;font-size:14px;font-weight:700}
+.flash i{width:14px;height:14px;border-radius:50%;flex:none}
+.flash-ok{background:var(--success-bg);color:var(--success)}.flash-ok i{background:var(--success)}
+.flash-err{background:var(--error-bg);color:var(--error)}.flash-err i{background:var(--error)}
+.modal-body .flash{margin:0 0 12px;height:44px}
+.tn-bar{display:flex;justify-content:space-between;align-items:center;margin-top:24px}
+.tn-bar h3{margin:0;font-size:13px;font-weight:700;letter-spacing:.2px;color:#1E6B4E}
+.btn-create{display:flex;align-items:center;gap:6px;height:40px;padding:0 24px;border:0;border-radius:var(--r-pill);background:var(--primary);color:#fff;font-size:14px;font-weight:700}
+.btn-create:hover{background:var(--primary-hover)}
+.tn-table{margin-top:8px}
+.tn-row{display:grid;grid-template-columns:184px 280px 160px 200px 1fr;align-items:center;padding-left:24px;font-size:14px}
+.tn-th{height:36px;border-bottom:1px solid var(--border);font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.3px}
+.tn-tr{height:52px;border-radius:12px;margin:6px -8px 0;padding:0 8px 0 32px}
+.tn-tr:hover{background:#E7F3EC}
+.tn-tr span,.tn-tr b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:12px}
+.tn-act{display:flex;gap:12px}
+.act{border:0;background:none;padding:0;font-size:13px;font-weight:700;color:var(--primary)}
+.act-del{color:var(--error)}
+.overlay{position:fixed;inset:0;z-index:50;background:rgba(10,95,62,.4);display:flex;align-items:center;justify-content:center;padding:16px}
+.overlay-top{z-index:60}
+.modal{max-width:100%;max-height:calc(100vh - 32px);background:#fff;border-radius:24px;display:flex;flex-direction:column}
+.modal-head{display:flex;justify-content:space-between;align-items:center;padding:28px 32px 4px}
+.modal-head h2{margin:0;font-size:20px;color:#1E6B4E}
+.modal-body{padding:8px 32px 28px;overflow:auto}
+.x-btn{width:32px;height:32px;border-radius:50%;border:0;background:var(--subtle);color:#4A5A54;display:grid;place-items:center}
+.f-group{margin-bottom:10px;flex:1;min-width:0}
+.f-row{display:flex;gap:16px}
+.f-label{display:block;margin-bottom:4px;font-size:12.5px;font-weight:700;color:var(--text)}
+.f-label b{color:var(--error)}
+.f-input{width:100%;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:10px;background:#F4F8F5;font:inherit;font-size:14px;color:var(--text);outline:0}
+.f-input::placeholder{color:#7C8A84}
+.f-input:focus{border-color:var(--primary);background:#F4F8F5}
+.f-input.err{border-color:var(--error)}
+.f-select{appearance:none;background:#F4F8F5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2366756F' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center}
+.f-area{height:74px;padding:10px 14px;resize:none}
+.f-err{margin:3px 0 0;font-size:12px;color:var(--error)}
+.f-file{display:flex;align-items:center;gap:12px;height:40px;padding:0 6px;border:1px solid var(--border);border-radius:10px;background:#F4F8F5;font-size:14px;color:var(--muted)}
+.file-btn{height:26px;padding:0 12px;border:1px solid var(--border);border-radius:var(--r-pill);background:#fff;color:var(--primary);font-size:12px;font-weight:700}
+.modal-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:14px;padding-top:16px;border-top:1px solid var(--border)}
+.btn-outline,.btn-fill,.btn-danger{height:40px;padding:0 30px;border-radius:var(--r-pill);font-size:14px;font-weight:700}
+.btn-outline{background:#fff;border:1px solid var(--primary);color:var(--primary)}
+.btn-fill{background:var(--primary);border:1px solid var(--primary);color:#fff}
+.btn-danger{background:var(--error);border:1px solid var(--error);color:#fff}
+.btn-fill:disabled,.btn-danger:disabled,.btn-outline:disabled{opacity:.6;cursor:default}
+.confirm{width:440px;max-width:100%;background:#fff;border-radius:24px;padding:28px 32px 24px}
+.confirm h2{margin:0 0 12px;font-size:18px;color:#1E6B4E}
+.confirm p{margin:0;font-size:14px;line-height:1.6;color:var(--text)}
+.confirm-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:8px}
+.overlay-top .confirm:has(.btn-danger){width:640px}
+.ct-row{padding:8px 0 6px;border-bottom:1px solid var(--border)}
+.ct-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ct-label{display:block;font-size:12px;font-weight:700;color:var(--muted)}
+.ct-val{display:block;margin-top:2px;font-size:14px}
+.ct-val.muted{color:var(--muted)}
+.ct-row:last-of-type{border-bottom:0}
+.ct-img{margin-top:6px;width:200px;height:112px;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+.ct-img img{width:100%;height:100%;object-fit:cover}
+.ct-noimg{margin-top:6px;height:112px;border:1px solid var(--border);border-radius:10px;display:grid;place-items:center;color:var(--muted);font-size:14px}
+
+.side{background:#fff}
+.nav-item{text-decoration:none;cursor:pointer}
+a.nav-item:hover:not(.active),.nav-item:hover:not(.active){background:rgba(255,255,255,.12)}
+
+/* Module Phòng trọ (UC3.x) */
+.pt-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+.pt-stat{display:flex;gap:12px;align-items:center;height:72px;padding:0 16px;border:1px solid var(--border);border-radius:14px;background:#fff}
+.pt-stat i{width:3px;height:44px;border-radius:2px;background:var(--primary)}
+.pt-stat:last-child i,.pt-stat:last-child b{background:none;color:var(--error)}
+.pt-stat:last-child i{background:var(--error)}
+.pt-stat span{display:block;font-size:12px;font-weight:700;color:var(--muted)}
+.pt-stat b{display:block;font-size:24px;color:var(--primary)}
+.pt-tools{display:flex;gap:16px;align-items:center;margin-top:16px}
+.pt-search{display:flex;align-items:center;gap:8px;width:240px;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:var(--r-pill);background:#F4F8F5;color:var(--muted)}
+.pt-search:focus-within{border-color:var(--primary);background:#fff}
+.pt-search input{border:0;outline:0;background:none;font:inherit;font-size:14px;width:100%;color:var(--text)}
+.pt-filter{width:160px;height:40px;padding:0 32px 0 14px;border:1px solid var(--border);border-radius:var(--r-pill);font:inherit;font-size:14px;color:var(--text)}
+.pt-row{display:grid;grid-template-columns:140px 150px 150px 180px 170px 1fr;align-items:center;padding-left:24px;font-size:14px}
+.pt-empty{text-align:center;margin-top:40px;color:var(--muted);font-size:14px}
+.pill{display:inline-block;padding:3px 12px;border-radius:var(--r-pill);font-size:11px;font-weight:700}
+.pill-thue,.pill-trong{background:#E3F4EA;color:var(--success)}
+.pill-sua{background:var(--error-bg);color:var(--error)}
+.ct-sec{margin:14px 0 2px;font-size:13px;color:#1E6B4E}
+
+/* Module Dịch vụ (UC7.x) */
+.dv-row{display:grid;grid-template-columns:170px 170px 160px 130px 170px 1fr;align-items:center;padding-left:24px;font-size:14px}
+.pill-off{background:#EEF1EF;color:#66756F}
+
+/* Module Người thuê (UC4.x) */
+.pt-stats.tri{grid-template-columns:repeat(3,1fr)}
+.nt-row{display:grid;grid-template-columns:190px 160px 190px 120px 1fr;align-items:center;padding-left:24px;font-size:14px}
+.btn-excel{height:40px;padding:0 24px;border:1px solid var(--primary);border-radius:var(--r-pill);background:#fff;color:var(--primary);font-size:14px;font-weight:700;margin-right:-4px}
+.nt-check{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.nt-check input{width:16px;height:16px;accent-color:var(--primary)}
+.f-file.err{border-color:var(--error)}
+.btn-excel:disabled{opacity:.5;cursor:default}
+
+/* Module Mẫu hợp đồng (UC6.x) + trình soạn thảo */
+.mh-row{display:grid;grid-template-columns:300px 1fr 140px;align-items:center;padding-left:24px;font-size:14px}
+.rte{border:1px solid var(--border);border-radius:10px;background:#fff;overflow:hidden}
+.rte.focus{border-color:var(--primary)}
+.rte.err{border-color:var(--error)}
+.rte-bar{display:flex;align-items:center;gap:2px;flex-wrap:wrap;padding:6px 8px;border-bottom:1px solid var(--border);background:#fff}
+.rte-bar button{min-width:26px;height:26px;border:0;border-radius:6px;background:none;color:var(--text);font-size:12px;font-weight:700;display:inline-grid;place-items:center;cursor:pointer}
+.rte-bar button:hover{background:var(--subtle)}
+.rte-bar button.on{background:#E3F4EA;color:var(--primary)}
+.rte-color{border-bottom:2px solid #d93025 !important;border-radius:0 !important}
+.rte-bar select{height:26px;border:1px solid var(--border);border-radius:6px;background:#F4F8F5;font:inherit;font-size:11px;color:var(--muted);margin:0 4px}
+.rte-bar i{width:1px;height:16px;background:var(--border);margin:0 6px}
+.rte-area{min-height:130px;max-height:260px;overflow:auto;padding:12px 14px;font-size:13px;line-height:1.6;outline:0}
+.rte-area:empty::before{content:attr(data-ph);color:#7C8A84}
+.rte-area h1{font-size:20px;margin:6px 0}.rte-area h2{font-size:17px;margin:6px 0}.rte-area h3{font-size:15px;margin:6px 0}
+.rte-area blockquote{margin:6px 0;padding-left:12px;border-left:3px solid var(--border);color:var(--muted)}
+
+/* Module Hợp đồng (UC5.x) */
+.hd-row{display:grid;grid-template-columns:150px 100px 150px 120px 210px 110px 1fr;align-items:center;padding-left:24px;font-size:14px}
+.hd-tr{min-height:60px;height:auto;padding-top:6px;padding-bottom:6px}
+.hd-han{display:flex;flex-direction:column;gap:4px;overflow:visible!important;white-space:normal!important}
+.hd-badges{display:flex;gap:6px;align-items:center}
+.pill-het{background:#FFF1D6;color:#9A6200}
+.pill-sap{background:var(--error);color:#fff;font-style:normal}
+.pill-gh{background:#FFF1D6;color:#9A6200;border:1px solid #E9B44C;cursor:pointer;font-family:inherit}
+.pill-gia{background:#fff;color:var(--text);border:1px solid var(--border);font-style:normal}
+.pill-chuky{background:#fff;color:var(--text);border:1px solid var(--border);font-style:normal}
+.hd-sub{margin:0 0 8px;font-size:13px;color:var(--muted)}
+.hd-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px}
+.hd-radios{display:flex;gap:22px;font-size:13px;padding:2px 0}
+.hd-radios label{display:flex;align-items:center;gap:6px;cursor:pointer}
+.hd-radios input{accent-color:var(--primary);width:15px;height:15px}
+.hd-radios.err input{outline:1px solid var(--error);outline-offset:1px;border-radius:50%}
+.f-input.ro{background:#EEF1EF;color:#4A5A54}
+.hd-dv{border:1px solid var(--border);border-radius:12px;padding:6px;display:flex;flex-direction:column;gap:6px}
+.hd-dv.err{border-color:var(--error)}
+.hd-dv-trong{margin:6px;font-size:13px;color:var(--muted)}
+.hd-dv-item{border:1px solid var(--border);border-radius:10px;padding:8px 12px;background:#fff}
+.hd-dv-top{display:flex;justify-content:space-between;align-items:center}
+.hd-dv-top b{display:block;font-size:13.5px}
+.hd-dv-top small{color:var(--muted);font-size:11.5px}
+.hd-dv-cs{margin-top:8px}
+.sw{position:relative;display:inline-block;width:38px;height:22px;flex:none}
+.sw input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0;z-index:1}
+.sw i{position:absolute;inset:0;border-radius:99px;background:#D3DAD6;transition:.15s}
+.sw i::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.15s}
+.sw input:checked+i{background:var(--primary)}
+.sw input:checked+i::after{left:19px}
+.hd-up{display:flex;align-items:center;justify-content:center;gap:10px;min-height:40px;border:1px dashed #B9C7C0;border-radius:10px;color:var(--primary);font-size:13px;font-weight:700;cursor:pointer;padding:6px}
+.hd-up.err{border-color:var(--error)}
+.hd-up img{width:44px;height:32px;object-fit:cover;border-radius:6px}
+.hd-chips{display:flex;gap:8px}
+.hd-chip{flex:1;height:36px;border:1px solid var(--border);border-radius:var(--r-pill);background:#fff;font:inherit;font-size:13px;color:var(--text);cursor:pointer}
+.hd-chip.on{border-color:var(--primary);background:#E3F4EA;color:var(--primary);font-weight:700}
+.hd-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:#EEF1EF;border-radius:12px;margin:24px 0 12px}
+.hd-tabs button{height:32px;border:0;border-radius:9px;background:none;font:inherit;font-size:13px;color:var(--muted);cursor:pointer}
+.hd-tabs button.on{background:#fff;color:var(--primary);font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.hd-ct-top{background:#EDF4F0;border-radius:14px;padding:14px}
+.hd-ct-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hd-ct-head h3{margin:0;font-size:16px;color:#1E6B4E}
+.hd-ct-tags{display:flex;gap:6px}
+.hd-ct-sub{display:flex;gap:6px;margin:8px 0}
+.hd-ct-box{background:#fff;border-radius:10px;padding:8px 12px;font-size:13.5px;font-weight:700}
+.hd-ct-top .ct-two{grid-template-columns:1fr 1fr;gap:8px}
+.hd-ct-card{border:1px solid var(--border);border-radius:12px;padding:10px 12px;font-size:13px;display:flex;flex-direction:column;gap:6px}
+.hd-ct-img{margin-top:12px;border:1px solid var(--border);border-radius:12px;min-height:56px;display:grid;place-items:center;overflow:hidden}
+.hd-ct-img img{max-width:100%;max-height:260px;display:block}
+.hd-nd-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:13px}
+.hd-pdf-btn{height:34px;padding:0 20px;font-size:13px}
+.hd-nd{border:1px solid var(--border);border-radius:12px;padding:16px;min-height:220px;max-height:420px;overflow:auto;font-size:14px;line-height:1.6}
+.hd-nd p{margin:0 0 6px}
+
+/* ---- Quản lý tài chính (UC8) ---- */
+.tc-row{display:grid;grid-template-columns:100px 140px 165px 105px 115px 130px 1fr;align-items:center;padding-left:24px;font-size:13px}
+.tc-tr{min-height:52px}
+.pill-chua{background:#FFF1D6;color:#9A6200}
+.pill-qua{background:#FDE7E7;color:var(--error)}
+.pill-gui-loi{background:#FDE7E7;color:var(--error)}
+.tc-act{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.act:disabled{color:#B4BFBA;cursor:not-allowed}
+.tc-dv{background:#F3F6F4;border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tc-dv-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 12px;display:flex;flex-direction:column;gap:6px;min-height:78px}
+.tc-dv-item.err{border-color:var(--error)}
+.tc-dv-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px}
+.tc-dv-top b{font-weight:700}
+.tc-dv-top span{color:var(--primary);font-weight:700;font-size:12.5px}
+.tc-dv-bot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.tc-dv-bot input{width:84px;border:1px solid var(--border);border-radius:8px;padding:3px 6px;font:inherit;font-size:12.5px}
+.tc-sum{background:#F3F6F4;border-radius:12px;padding:10px 14px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-size:12px;color:var(--muted)}
+.tc-sum b{display:block;color:var(--text);font-size:13px;margin-top:2px}
+.tc-sum .tong b{color:var(--primary);font-size:14px}
+.tc-det h3{margin:14px 0 6px;font-size:14px;color:var(--primary)}
+.tc-det .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-size:13px}
+.tc-det .g4 span{display:block;color:var(--muted);font-size:11.5px}
+.tc-det table{width:100%;border-collapse:collapse;font-size:13px}
+.tc-det th{text-align:left;font-size:11px;color:var(--muted);padding:4px 6px}
+.tc-det td{padding:7px 6px;border-top:1px solid var(--border)}
+.tc-det .r{text-align:right}
+.tc-det-bot{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;margin-top:10px}
+.tc-det-bot img{width:120px;height:120px;border-radius:6px}
+.tc-tong{background:#EEF3F0;border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;font-weight:700;margin-top:10px}
+
+/* ---- Báo cáo (UC9) ---- */
+.bc-title{margin:16px 0 6px;font-size:12px;font-weight:800;letter-spacing:.3px;color:var(--primary)}
+.bc-filter{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;margin-bottom:14px}
+.bc-filter label{display:flex;flex-direction:column;gap:4px;font-size:11.5px;font-weight:700}
+.bc-filter select{min-width:150px;height:40px}
+.bc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:12px;display:flex}
+.bc-card small{display:block;font-size:11.5px;font-weight:700;color:#4A5A54}
+.bc-big{display:block;font-size:30px;font-weight:800;color:var(--primary);margin-top:4px}
+.bc-bar{border-left:3px solid var(--primary);padding-left:14px;flex:1}
+.bc-bar.cho{border-color:#C9871B}
+.bc-cc{flex-direction:column;gap:8px}
+.bc-cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bc-cc-grid div{background:#F1F5F2;border-radius:10px;padding:10px 14px}
+.bc-cc-grid b{display:block;font-size:20px;color:var(--primary);margin-top:2px}
+.bc-sep{border-left:1px solid var(--border);padding-left:24px;flex:1}
