@@ -18,12 +18,12 @@
 | UC1 | Đăng nhập | Trang đăng nhập |
 | UC1.1 | Quên mật khẩu (xác thực bằng mã gửi qua email) | Liên kết "Quên mật khẩu" |
 | UC2 | Quản lý nhà trọ (thêm, xem, sửa, xóa) | Quản lý nhà trọ |
-| UC3 | Quản lý phòng trọ | Quản lý phòng trọ |
-| UC4 | Quản lý người thuê (thêm, xem, sửa, xóa, tra cứu, xuất Excel) | Quản lý người thuê |
-| UC5 | Quản lý hợp đồng (thêm, xem, chỉnh sửa, gia hạn, chấm dứt, tra cứu, xuất hợp đồng) | Quản lý hợp đồng |
+| UC3 | Quản lý phòng trọ (thêm, xem danh sách, xem chi tiết, sửa, xóa, tra cứu) | Quản lý phòng trọ |
+| UC4 | Quản lý người thuê (thêm, xem danh sách, xem chi tiết, sửa, xóa, tra cứu, xuất Excel) | Quản lý người thuê |
+| UC5 | Quản lý hợp đồng (thêm, xem danh sách, xem chi tiết,, chỉnh sửa, gia hạn, chấm dứt, tra cứu, xuất hợp đồng) | Quản lý hợp đồng |
 | UC6 | Quản lý mẫu hợp đồng (thêm, sửa, xóa) | Quản lý mẫu hợp đồng |
 | UC7 | Quản lý dịch vụ (thêm, sửa, xóa, xem danh sách, tra cứu) | Quản lý dịch vụ |
-| UC8 | Quản lý tài chính (tạo, xem, chỉnh sửa, xóa hóa đơn, xác nhận thanh toán, mã QR, gửi hóa đơn qua email, nhắc thanh toán quá hạn) | Quản lý tài chính |
+| UC8 | Quản lý tài chính (tạo, xem danh sách, xem chi tiết, chỉnh sửa, xóa hóa đơn, xác nhận thanh toán, gửi hóa đơn qua email, nhắc thanh toán quá hạn) | Quản lý tài chính |
 | UC9 | Báo cáo (xem, lọc, tra cứu) | Báo cáo |
 
 ## Công nghệ
