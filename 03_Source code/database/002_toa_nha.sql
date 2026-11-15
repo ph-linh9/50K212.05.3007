@@ -1,4 +1,4 @@
--- UC2.1-2.4 - bảng toa_nha (SDD: TOANHA), PostgreSQL, snake_case
+-- UC2.1-2.4 - bảng toa_nha 
 CREATE TABLE IF NOT EXISTS toa_nha (
   ma_toa_nha          SERIAL PRIMARY KEY,
   ten_toa_nha         VARCHAR(100) NOT NULL,
